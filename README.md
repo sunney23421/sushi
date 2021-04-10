@@ -26,7 +26,7 @@ This the how to setup your phone position
 - The phone need to be over the object(sushi) at least all of sushi needs to fit in the frame
 - The sushi detection will able to define by top's of sushi, not side of sushi. 
 - when you take photo, it's should look like this
-<img src="https://user-images.githubusercontent.com/39997819/114253739-9ada1780-99d5-11eb-9bc0-e4b80de8087b.jpg" width="400" height="790">
+<img src="https://user-images.githubusercontent.com/39997819/114253739-9ada1780-99d5-11eb-9bc0-e4b80de8087b.jpg">
 
 ## How to use
 <img src="https://user-images.githubusercontent.com/39997819/114254216-3f5d5900-99d8-11eb-87a6-7d63d5746db2.jpg" width="400" height="790">
