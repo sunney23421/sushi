@@ -194,14 +194,23 @@ class _StaticImage2State extends State<StaticImage2> {
     });
   }
 
+  int dele = 0;
   List<Widget> aa() {
     if (_recognitions == null) return [];
     return _recognitions.map((re) {
       int lent = _recognitions.length;
 
-      if (lent > name.length) {
+      if (lent > name.length && dele <= 0) {
         name.add("${re["detectedClass"]}");
+        print("not ok");
+      } else {
+        print("ok");
       }
+      // if (del == false) {
+      //   //name.remove("${re["detectedClass"]}");
+      //   print("ok");
+      // }
+
       if (lent < name.length) {
         name.clear();
         netTotal = 0;
@@ -601,7 +610,8 @@ class _StaticImage2State extends State<StaticImage2> {
                                         // setState because, everytime flutter need to redraw in order to show update
                                         setState(() {
                                           name.remove("${unique[index]}");
-
+                                          dele = 2;
+                                          // print(dele);
                                           //print(unique);
                                         }); // delete button
                                       },
@@ -1093,6 +1103,7 @@ class _StaticImage2State extends State<StaticImage2> {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
         name.clear();
+        dele = 0;
       } else {
         print("No image Selected");
       }
@@ -1107,6 +1118,7 @@ class _StaticImage2State extends State<StaticImage2> {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
         name.clear();
+        dele = 0;
       } else {
         print("No image Selected");
       }
