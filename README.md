@@ -29,7 +29,7 @@ This the how to setup your phone position
 <img src="https://user-images.githubusercontent.com/39997819/114253739-9ada1780-99d5-11eb-9bc0-e4b80de8087b.jpg">
 
 ## How to use
-<img scr="https://user-images.githubusercontent.com/39997819/114254190-15a43200-99d8-11eb-8f20-1412f575e330.png">
+<img scr="https://user-images.githubusercontent.com/39997819/114254216-3f5d5900-99d8-11eb-87a6-7d63d5746db2.jpg">
 From left to right
 
 - The first section is Tensorflow detection, just press the btn to take the photo. The result will show image with label node over the image
