@@ -29,6 +29,7 @@ dependencies:
   shared_preferences: ^0.5.2
   splashscreen:
   intl: ^0.16.1
+ 
   #add here
 
 

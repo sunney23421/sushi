@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:tflite/tflite.dart';
 import 'package:intl/intl.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -199,23 +198,23 @@ class _StaticImage2State extends State<StaticImage2> {
     if (_recognitions == null) return [];
     return _recognitions.map((re) {
       int lent = _recognitions.length;
-
-      if (lent > name.length && dele <= 0) {
+      //int dele = 0;
+      if (lent > name.length) {
         name.add("${re["detectedClass"]}");
-        print("not ok");
-      } else {
-        print("ok");
+        print("$lent ${name.length}");
+      } else if (dele != 0) {
+        print("you can dele");
       }
       // if (del == false) {
       //   //name.remove("${re["detectedClass"]}");
       //   print("ok");
       // }
 
-      if (lent < name.length) {
-        name.clear();
-        netTotal = 0;
-        answer = "0";
-      }
+      // if (lent < name.length) {
+      //   name.clear();
+      //   netTotal = 0;
+      //   answer = "0";
+      // }
     }).toList();
   }
 
@@ -223,6 +222,12 @@ class _StaticImage2State extends State<StaticImage2> {
   List<Widget> renderBoxes(Size screen) {
     if (_recognitions == null) return [];
     if (_imageWidth == null || _imageHeight == null) return [];
+
+    // Timer(Duration(seconds: 1), () {
+    //   setState(() {
+    //     print("waiting");
+    //   });
+    // });
 
     //double factorX = screen.width;
     double factorX = screen.width;
@@ -234,7 +239,7 @@ class _StaticImage2State extends State<StaticImage2> {
     return _recognitions.map((re) {
       // if (!list.any((element) => element == "${re["detectedClass"]}")) {
       //   list.add("${re["detectedClass"]}");
-
+      //name.clear();
       return Container(
         child: Positioned(
             //left: re["rect"]["x"] * factorX,
@@ -855,25 +860,30 @@ class _StaticImage2State extends State<StaticImage2> {
                                               int.parse(answer) <= 1200) {
                                             print("show showDialog");
 
-                                            setState(() {
-                                              removeAnswerLast();
-                                              answer = "0";
-                                              netTotal = 0;
-                                              // for summary
+                                            setState(
+                                              () {
+                                                removeAnswerLast();
+                                                answer = "0";
+                                                netTotal = 0;
+                                                dele = 2;
 
-                                              t.add(DateFormat(
-                                                      "dd-MM-yyyy hh:mm:ss")
-                                                  .format(DateTime.now()));
-                                              n.add("$name");
-                                              p.add("${totalPrice(name)}");
-                                              c.add("${name.length}");
-                                              list.clear();
-                                              unique.clear();
+                                                // for summary
 
-                                              name.clear();
-                                              //end summary
-                                              //here
-                                            });
+                                                t.add(DateFormat(
+                                                        "dd-MM-yyyy hh:mm:ss")
+                                                    .format(DateTime.now()));
+                                                n.add("$name");
+                                                p.add("${totalPrice(name)}");
+                                                c.add("${name.length}");
+
+                                                //pass ok
+                                                list.clear();
+                                                unique.clear();
+                                                name.clear();
+                                                //end summary
+                                                //here
+                                              },
+                                            );
                                             showDialog(
                                                 context: context,
                                                 builder: (context) {
@@ -1240,7 +1250,6 @@ class SecondPage extends StatefulWidget {
 class _SecondPageState extends State<SecondPage> {
   final String titleString = "Summary";
   String time = DateFormat("dd-MM-yyyy hh:mm:ss").format(DateTime.now());
-  SharedPreferences sharedPreferences;
 
   @override
   Widget build(BuildContext context) {
@@ -1307,7 +1316,7 @@ class _SecondPageState extends State<SecondPage> {
                                   Expanded(
                                     child: Center(
                                       child: Text(
-                                        "Pcs ${c[index]} ",
+                                        "Pics ${c[index]} ",
                                       ),
                                     ),
                                   ),
@@ -1318,7 +1327,6 @@ class _SecondPageState extends State<SecondPage> {
                                             BorderRadius.circular(8.0),
                                         color: Colors.red,
                                       ),
-                                      //color: Colors.red,
                                       child: Center(
                                         child: Text(
                                           "Total Price is ${p[index]}",
