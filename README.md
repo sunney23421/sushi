@@ -1,6 +1,6 @@
 # SushiProjectZero
 
-This project is about Objection by using Tensorflow, Tensorflow Lite to detect 10 types of sushi and using Flutter.
+This project is about object detection by using Tensorflow, Tensorflow Lite to detect 10 types of sushi and using Flutter.
 
 ## why?
 Beacuse I like to fix the problem and cut-corner. To make our life easier with technology. it's 2020 man modern problems require modern solutions!!
