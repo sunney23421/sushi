@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 99,
+      seconds: 2,
       navigateAfterSeconds: new SelectChoice(),
       title: new Text('Welcome In sushi Detection',
       style: new TextStyle(
