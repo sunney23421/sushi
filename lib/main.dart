@@ -20,7 +20,7 @@ class StaticImage2 extends StatefulWidget {
 }
 
 //decal value,
-List<String> list = [];
+List<String> list = []; // take all sushi name
 List uniqueStrings = []; // take list and take only unique name
 int salmonCount = 0;
 List t = []; //summary show time
@@ -30,8 +30,6 @@ List c = []; //summary show count sushi
 
 List name = []; //all name fo sushi in list
 var unique = []; // get unique namae fron list
-
-List sp = [];
 
 // To set the price of sushi
 int crab = 10;
@@ -199,11 +197,10 @@ class _StaticImage2State extends State<StaticImage2> {
     return _recognitions.map((re) {
       int lent = _recognitions.length;
       //int dele = 0;
-      if (lent > name.length) {
+      if (lent > name.length && dele == 0) {
         name.add("${re["detectedClass"]}");
-        print("$lent ${name.length}");
-      } else if (dele != 0) {
-        print("you can dele");
+        //print("$lent ${name.length} $dele");
+        print("asdfasdfasdf");
       }
       // if (del == false) {
       //   //name.remove("${re["detectedClass"]}");
@@ -223,11 +220,12 @@ class _StaticImage2State extends State<StaticImage2> {
     if (_recognitions == null) return [];
     if (_imageWidth == null || _imageHeight == null) return [];
 
-    // Timer(Duration(seconds: 1), () {
-    //   setState(() {
-    //     print("waiting");
-    //   });
-    // });
+    Timer(Duration(seconds: 1), () {
+      setState(() {
+        //name.clear();
+        print("waiting");
+      });
+    });
 
     //double factorX = screen.width;
     double factorX = screen.width;
@@ -239,7 +237,9 @@ class _StaticImage2State extends State<StaticImage2> {
     return _recognitions.map((re) {
       // if (!list.any((element) => element == "${re["detectedClass"]}")) {
       //   list.add("${re["detectedClass"]}");
-      //name.clear();
+
+      print("from $name");
+
       return Container(
         child: Positioned(
             //left: re["rect"]["x"] * factorX,
@@ -616,7 +616,7 @@ class _StaticImage2State extends State<StaticImage2> {
                                         setState(() {
                                           name.remove("${unique[index]}");
                                           dele = 2;
-                                          // print(dele);
+                                          print(name);
                                           //print(unique);
                                         }); // delete button
                                       },
@@ -862,7 +862,6 @@ class _StaticImage2State extends State<StaticImage2> {
 
                                             setState(
                                               () {
-                                                removeAnswerLast();
                                                 answer = "0";
                                                 netTotal = 0;
                                                 dele = 2;
@@ -875,9 +874,10 @@ class _StaticImage2State extends State<StaticImage2> {
                                                 n.add("$name");
                                                 p.add("${totalPrice(name)}");
                                                 c.add("${name.length}");
-
+                                                removeAnswerLast();
                                                 //pass ok
                                                 list.clear();
+                                                uniqueStrings.clear();
                                                 unique.clear();
                                                 name.clear();
                                                 //end summary
@@ -1112,6 +1112,7 @@ class _StaticImage2State extends State<StaticImage2> {
     setState(() {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
+        removeAnswerLast();
         name.clear();
         dele = 0;
       } else {
@@ -1127,6 +1128,7 @@ class _StaticImage2State extends State<StaticImage2> {
     setState(() {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
+        removeAnswerLast();
         name.clear();
         dele = 0;
       } else {
