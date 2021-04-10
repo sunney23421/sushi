@@ -8,7 +8,7 @@ Beacuse I like to fix the problem and cut-corner. To make our life easier with t
 <img src="https://media.giphy.com/media/9058ZMj6ooluP4UUPl/giphy.gif">
 
 ## Concept
-I would like to devlop the applicaton that can detect various types of sushi and calculate all those price.
+I would like to devlop the application that can detect various types of sushi and calculate all those price.
 So, employees don't need to think what kind of sushi that customer took. 
 Moreover, new employees don't need to remember how many type of sushi what we're selling, what price are they.
 
