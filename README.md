@@ -18,8 +18,7 @@ This the how to setup your phone position
 - The sushi detection will able to define by top's of sushi, not side of sushi. 
 
 ## Types of sushi
-<img src="![image](https://user-images.githubusercontent.com/39997819/114253368-1aff7d80-99d4-11eb-972c-3533a406bf58.png)
-">
+<img src="https://user-images.githubusercontent.com/39997819/114253368-1aff7d80-99d4-11eb-972c-3533a406bf58.png">
 
 ## Getting Started
 This project is a starting point for a Flutter application.
