@@ -24,6 +24,7 @@ This the how to setup your phone position
 ## Types of sushi
 <img src="https://user-images.githubusercontent.com/39997819/114253368-1aff7d80-99d4-11eb-972c-3533a406bf58.png">
 I used data set 10 of these sushi.
+
 - Salmon
 - Maguro
 - Eel
