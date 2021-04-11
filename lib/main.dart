@@ -309,6 +309,9 @@ class _StaticImage2State extends State<StaticImage2> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
+                          SizedBox(
+                            width: 10,
+                          ),
                           FloatingActionButton(
                             heroTag: "Fltbtn2",
                             child: Icon(Icons.camera_alt),
@@ -317,14 +320,14 @@ class _StaticImage2State extends State<StaticImage2> {
                           SizedBox(
                             width: 10,
                           ),
-                          FloatingActionButton(
-                            heroTag: "Fltbtn1",
-                            child: Icon(Icons.photo),
-                            onPressed: getImageFromGallery,
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
+                          // FloatingActionButton(
+                          //   heroTag: "Fltbtn1",
+                          //   child: Icon(Icons.photo),
+                          //   onPressed: getImageFromGallery,
+                          // ),
+                          // SizedBox(
+                          //   width: 10,
+                          // ),
                         ],
                       ),
                     ),
@@ -352,14 +355,14 @@ class _StaticImage2State extends State<StaticImage2> {
                         SizedBox(
                           width: 10,
                         ),
-                        FloatingActionButton(
-                          heroTag: "Fltbtn1",
-                          child: Icon(Icons.photo),
-                          onPressed: getImageFromGallery,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
+                        // FloatingActionButton(
+                        //   heroTag: "Fltbtn1",
+                        //   child: Icon(Icons.photo),
+                        //   onPressed: getImageFromGallery,
+                        // ),
+                        // SizedBox(
+                        //   width: 10,
+                        // ),
                         FloatingActionButton(
                           heroTag: "Fltbtn3",
                           backgroundColor: Colors.pink,
