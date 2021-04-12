@@ -2,7 +2,7 @@
 
 This project is about object detection by using Tensorflow, Tensorflow Lite to detect 10 types of sushi and using Flutter.
 
-## why?
+## Why?
 Beacuse I like to fix the problem and cut-corner. To make our life easier with technology. it's 2020 man modern problems require modern solutions!!
 
 <img src="https://media.giphy.com/media/9058ZMj6ooluP4UUPl/giphy.gif">
@@ -69,3 +69,5 @@ samples, guidance on mobile development, and a full API reference.
 I lost my soul while developing this app...
 
 <img src="https://media.giphy.com/media/zOvBKUUEERdNm/giphy.gif"  />
+
+special thanks>> shanya, can do it without you. thankyou:)

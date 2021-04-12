@@ -64,7 +64,7 @@ class _SelectChoiceState extends State<SelectChoice> {
                   color: Colors.orangeAccent,
                   child: Center(
                       child: Text(
-                    "Go to Sushi Detection",
+                    "Go to Summary",
                     style: TextStyle(fontSize: 30),
                   )),
                 ),
