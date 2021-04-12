@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
     return new SplashScreen(
       seconds: 2,
       navigateAfterSeconds: new SelectChoice(),
-      title: new Text('Welcome In sushi Detection',
+      title: new Text('Welcome to Sunney sushi Detection',
       style: new TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: 20.0,
