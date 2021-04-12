@@ -196,22 +196,11 @@ class _StaticImage2State extends State<StaticImage2> {
     if (_recognitions == null) return [];
     return _recognitions.map((re) {
       int lent = _recognitions.length;
-      //int dele = 0;
       if (lent > name.length && dele == 0) {
         name.add("${re["detectedClass"]}");
-        //print("$lent ${name.length} $dele");
         print("asdfasdfasdf");
       }
-      // if (del == false) {
-      //   //name.remove("${re["detectedClass"]}");
-      //   print("ok");
-      // }
-
-      // if (lent < name.length) {
-      //   name.clear();
-      //   netTotal = 0;
-      //   answer = "0";
-      // }
+      
     }).toList();
   }
 
@@ -227,10 +216,6 @@ class _StaticImage2State extends State<StaticImage2> {
       });
     });
 
-    //double factorX = screen.width;
-    double factorX = screen.width;
-    double factorY = _imageHeight / _imageHeight * screen.width;
-    //double factorY = _imageHeight / _imageHeight * screen.width;
 
     Color blue = Colors.blue;
 
@@ -242,18 +227,12 @@ class _StaticImage2State extends State<StaticImage2> {
 
       return Container(
         child: Positioned(
-            //left: re["rect"]["x"] * factorX,
             left: re["rect"]["x"] * 200,
             top: re["rect"]["y"] * 300,
-            //width: re["rect"]["w"] * factorX,
-            //height: re["rect"]["h"] * factorY,
+            
             child: ((re["confidenceInClass"] > 0.50))
                 ? Container(
-                    // decoration: BoxDecoration(
-                    //     border: Border.all(
-                    //   color: blue,
-                    //   width: 4,
-                    // )),
+                   
                     child: Column(
                       children: <Widget>[
                         Text(
@@ -320,14 +299,7 @@ class _StaticImage2State extends State<StaticImage2> {
                           SizedBox(
                             width: 10,
                           ),
-                          // FloatingActionButton(
-                          //   heroTag: "Fltbtn1",
-                          //   child: Icon(Icons.photo),
-                          //   onPressed: getImageFromGallery,
-                          // ),
-                          // SizedBox(
-                          //   width: 10,
-                          // ),
+                          
                         ],
                       ),
                     ),
@@ -355,18 +327,10 @@ class _StaticImage2State extends State<StaticImage2> {
                         SizedBox(
                           width: 10,
                         ),
-                        // FloatingActionButton(
-                        //   heroTag: "Fltbtn1",
-                        //   child: Icon(Icons.photo),
-                        //   onPressed: getImageFromGallery,
-                        // ),
-                        // SizedBox(
-                        //   width: 10,
-                        // ),
+                        
                         FloatingActionButton(
                           heroTag: "Fltbtn3",
                           backgroundColor: Colors.pink,
-                          // child: Icon(Icons.bug_report),
                           child: Text("${name.length}"),
                           onPressed: () {
                             print("btn clicked");
@@ -620,7 +584,6 @@ class _StaticImage2State extends State<StaticImage2> {
                                           name.remove("${unique[index]}");
                                           dele = 2;
                                           print(name);
-                                          //print(unique);
                                         }); // delete button
                                       },
                                       shape: RoundedRectangleBorder(
@@ -1064,36 +1027,7 @@ class _StaticImage2State extends State<StaticImage2> {
                                   ),
                                 ),
 
-                                //here
-                                // Expanded(
-                                //   child: Container(
-                                //     width: double.infinity,
-                                //     child: FlatButton(
-                                //       color: Colors.red,
-                                //       onPressed: () {
-                                //         // t.add(DateFormat(
-                                //         //         "dd-MM-yyyy hh:mm:ss")
-                                //         //     .format(DateTime.now()));
-                                //         // n.add("$name");
-                                //         // p.add("${totalPrice(name)}");
-                                //         // c.add("${name.length}");
-                                //         // name.clear();
-                                //         // print(n);
-                                //         print(stackChildren);
-                                //       },
-                                //       child: Row(
-                                //         mainAxisAlignment:
-                                //             MainAxisAlignment.spaceAround,
-                                //         children: [
-                                //           Icon(
-                                //             Icons.bug_report,
-                                //             size: 30,
-                                //           ),
-                                //         ],
-                                //       ),
-                                //     ),
-                                //   ),
-                                // ),
+                              
                               ],
                             ),
                           ))

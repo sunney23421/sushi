@@ -1,9 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:sushiProjectZero/backUp/fixedtf.dart';
 import 'package:sushiProjectZero/main.dart';
-import 'package:sushiProjectZero/notused/tflite.dart';
-import 'package:sushiProjectZero/testStage/test_00.dart';
 
 class SelectChoice extends StatefulWidget {
   SelectChoice({Key key}) : super(key: key);
