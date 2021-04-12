@@ -359,6 +359,7 @@ class _StaticImage2State extends State<StaticImage2> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Sushi Detector"),
+      
       ),
       body: Column(
         children: [

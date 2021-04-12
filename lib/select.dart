@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sushiProjectZero/detection.dart';
+import 'package:loading_animations/loading_animations.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SelectChoice extends StatefulWidget {
   SelectChoice({Key key}) : super(key: key);
@@ -12,8 +14,6 @@ class SelectChoice extends StatefulWidget {
 class _SelectChoiceState extends State<SelectChoice> {
   @override
   Widget build(BuildContext context) {
-    double wigthH = MediaQuery.of(context).size.width;
-    double heightH = MediaQuery.of(context).size.height;
     return SafeArea(
         child: Scaffold(
       body: new Container(
@@ -33,13 +33,6 @@ class _SelectChoiceState extends State<SelectChoice> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(flex: 2, child: Container()),
-              // Expanded(flex:3,
-              //     child: Container(
-              //   decoration: BoxDecoration(
-              //       color: Colors.blueAccent,
-              //       shape: BoxShape.rectangle,
-              //       borderRadius: BorderRadius.circular(100)),
-              // )),
               Expanded(
                 flex: 3,
                 child: RaisedButton(
@@ -63,12 +56,12 @@ class _SelectChoiceState extends State<SelectChoice> {
                 child: RaisedButton(
                   onPressed: () {
                     var rount = new MaterialPageRoute(
-                        builder: (BuildContext contex) => new StaticImage2());
+                        builder: (BuildContext contex) => new SecondPage());
                     Navigator.of(context).push(rount);
                   },
                   shape: RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(30.0)),
-                      color: Colors.orangeAccent,
+                  color: Colors.orangeAccent,
                   child: Center(
                       child: Text(
                     "Go to Sushi Detection",
@@ -77,6 +70,26 @@ class _SelectChoiceState extends State<SelectChoice> {
                 ),
               ),
               Expanded(flex: 2, child: Container()),
+              Expanded(
+                flex: 1,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FlatButton(
+                        onPressed: _launchURL,
+                        // shape: RoundedRectangleBorder(
+                        //     borderRadius: new BorderRadius.circular(300.0)),
+                        color: Colors.transparent,
+                        child: LoadingBouncingGrid.square(
+                          borderColor: Colors.orange,
+                          borderSize: 1.0,
+                          size: 60.0,
+                          backgroundColor: Colors.black,
+                          duration: Duration(milliseconds: 3000),
+                        )),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
@@ -85,37 +98,11 @@ class _SelectChoiceState extends State<SelectChoice> {
   }
 }
 
-// Column(
-//   children: [
-//     Container(
-
-//         child: RaisedButton(
-//           onPressed: () {
-//             var rount = new MaterialPageRoute(
-//                 builder: (BuildContext contex) => new StaticImage2());
-//             Navigator.of(context).push(rount);
-//           },
-//           child: Center(
-//               child: Text(
-//             "Go to Sushi Detection",
-//             style: TextStyle(fontSize: 30),
-//           )),
-//           color: Colors.orange[700],
-//         )),
-//     Container(
-
-//         child: RaisedButton(
-//           onPressed: () {
-//             var rount = new MaterialPageRoute(
-//                 builder: (BuildContext contex) => new SecondPage());
-//             Navigator.of(context).push(rount);
-//           },
-//           child: Center(
-//               child: Text(
-//             "Go to Sushi Summary",
-//             style: TextStyle(fontSize: 30),
-//           )),
-//           color: Colors.pink[500],
-//         )),
-//   ],
-// )
+_launchURL() async {
+  const url = 'https://github.com/sunney23421/sushi';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
