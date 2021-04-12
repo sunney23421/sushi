@@ -1,5 +1,6 @@
+import 'dart:async';
+import 'package:loading_animations/loading_animations.dart';
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
 import 'package:sushiProjectZero/select.dart';
 
 void main() {
@@ -17,37 +18,66 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return new SplashScreen(
-        seconds: 9999,
-        navigateAfterSeconds: new SelectChoice(),
-        title: new Text(
-          'Welcome to Sunney sushi Detection',
-          style: new TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20.0,
-            color: Colors.white,
+    Timer(
+        Duration(seconds: 1),
+        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => SelectChoice())));
+    return SafeArea(
+      child: new Scaffold(
+        body: new Container(
+          decoration: new BoxDecoration(
+              gradient: new LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.orange,
+              Colors.orange[100],
+              Colors.blue[100],
+              Colors.blue,
+            ],
+          )),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 50,
+                ),
+                Image.asset(
+                  "assets/logo.png",
+                  height: 200,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  "Tensorflow" " + " "Flutter",
+                  style: new TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30.0,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Image.asset(
+                  "assets/logo_flutter.png",
+                  height: 100,
+                ),
+                SizedBox(
+                  height: 100,
+                ),
+                LoadingBouncingGrid.circle(
+                  borderColor: Colors.orange,
+                  borderSize: 3.0,
+                  size: 60.0,
+                  backgroundColor: Colors.orangeAccent,
+                  duration: Duration(milliseconds: 2000),
+                )
+              ],
+            ),
           ),
-        ),
-        image: new Image.asset("assets/logo.png"),
-        backgroundColor: Colors.transparent,
-        
-        styleTextUnderTheLoader: new TextStyle(),
-        photoSize: 100.0,
-        onClick: () => print("Flutter Egypt"),
-        
-        loaderColor: Colors.red);
-  }
-}
-
-class AfterSplash extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(automaticallyImplyLeading: false),
-      body: new Center(
-        child: new Text(
-          "Done!",
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
         ),
       ),
     );
