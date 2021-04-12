@@ -70,4 +70,6 @@ I lost my soul while developing this app...
 
 <img src="https://media.giphy.com/media/zOvBKUUEERdNm/giphy.gif"  />
 
-special thanks>> shanya, can do it without you. thankyou:)
+special thanks>> shanya, couldn't do it without you. thankyou:)
+
+<img src="https://media.giphy.com/media/13awhIC2CcDaHC/giphy.gif"  />
