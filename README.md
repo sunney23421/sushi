@@ -1,6 +1,6 @@
 # SushiProjectZero
 
-This project is about object detection that can identify 10 types of sushi by using Tensorflow,it used by Flutter as a mobile frame work .
+This project is about object detection that can identify 10 types of sushi by using Tensorflow, it used by Flutter as a mobile frame work.
 
 ## Why?
 The reason why I've decided to create this app is beacuse I like to solve problems and cut-corners. I'd like to make our life easier by using  technologies. It's 2021, modern problems require modern solutions!!
@@ -20,13 +20,13 @@ I divided images into 2 sets:
 First is, test set in 10% of total iamges. Second is, train set with 90% of images.
 
 - To train the custom model, I use google Co-lab because of higher GPU power than my laptop.
-- The model took me around 3 days, since loss rate didn't get any lower (lower loss rate is, more accurate it's going to be )
+- The model took me around 3 days, since loss rate didn't get any lower (lower loss rate is, more accurate it's going to be).
 
 ## Setup
 This is how to setup your phone position.
 - The phone need to be above the object(sushi) at least all of them must fit into the screen.
-- The sushi detection will be able to identify the top layer of sushi only, not sides 
-- When you took a  photo, it should look like this
+- The sushi detection will be able to identify the top layer of sushi only, not sides.
+- When you took a  photo, it should look like this.
 <img src="https://user-images.githubusercontent.com/39997819/114253739-9ada1780-99d5-11eb-9bc0-e4b80de8087b.jpg">
 
 ## How to use
