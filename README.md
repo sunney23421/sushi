@@ -1,41 +1,42 @@
 # SushiProjectZero
 
-This project is about object detection by using Tensorflow, Tensorflow Lite to detect 10 types of sushi and using Flutter.
+This project is about object detection that can identify 10 types of sushi by using Tensorflow,it used by Flutter as a mobile frame work .
 
 ## Why?
-Beacuse I like to fix the problem and cut-corner. To make our life easier with technology. it's 2020 man modern problems require modern solutions!!
+The reason why I've decided to create this app is beacuse I like to solve problems and cut-corners. I'd like to make our life easier by using  technologies. It's 2021, modern problems require modern solutions!!
 
 <img src="https://media.giphy.com/media/9058ZMj6ooluP4UUPl/giphy.gif">
 
 ## Concept
-I would like to devlop the application that can detect various types of sushi and calculate all those price.
-So, employees don't need to think what kind of sushi that customer took. 
-Moreover, new employees don't need to remember how many type of sushi what we're selling, what price are they.
+I'd like to develop application that can detect various types of sushi and calculate its price.
+Application is full of advantages that will make your life easier. It is a good opportunity for an employee to save time by recognizing what kind of sushi their customer took. 
+Moreover, new employees don't have to waste their time by remembering each type of sushi and its price. My apptlication will do all hard work for you.
 
 ## How it's work?
-I use Tensorflow 1.5 as the framework, and convert to Tensorflow lite and use with Flutter.
+I've used Tensorflow 1.5 as the framework, converted to Tensorflow lite and used with Flutter.
 TensorFlow is Google's open source AI framework for machine learning and high performance numerical computation.
-I use around 2000 images of 10 types of sushi. Which is around 200 pre class.
-I divided images into 2 set, first is test set in 10% of total iamges and Second is train set with 90% of images.
+I used around 2000 images of 10 types of sushi, which is around 200 pre classes.
+I divided images into 2 sets: 
+First is, test set in 10% of total iamges. Second is, train set with 90% of images.
 
-- To train the custom model, I use google Co-lab because higher gpu power that my notebook.
-- The model took around 3 days,since the loss rate is not getting anylower(how low of loss rate is, more accuracy it's going to be )
+- To train the custom model, I use google Co-lab because of higher GPU power than my laptop.
+- The model took me around 3 days, since loss rate didn't get any lower (lower loss rate is, more accurate it's going to be )
 
 ## Setup
-This the how to setup your phone position
-- The phone need to be over the object(sushi) at least all of sushi needs to fit in the frame
-- The sushi detection will able to define by top's of sushi, not side of sushi. 
-- when you take photo, it's should look like this
+This is how to setup your phone position.
+- The phone need to be above the object(sushi) at least all of them must fit into the screen.
+- The sushi detection will be able to identify the top layer of sushi only, not sides 
+- When you took a  photo, it should look like this
 <img src="https://user-images.githubusercontent.com/39997819/114253739-9ada1780-99d5-11eb-9bc0-e4b80de8087b.jpg">
 
 ## How to use
 <img src="https://user-images.githubusercontent.com/39997819/114254216-3f5d5900-99d8-11eb-87a6-7d63d5746db2.jpg" width="400" height="790">
 From left to right
 
-- The first section is Tensorflow detection, just press the btn to take the photo. The result will show image with label node over the image
-- Second, for at extra sushi into list, or some sushi that has't been detected.
-- Next, Is show the list of sushi.
-- Lastly, just calculator.
+- First, press the button to take a photo. As a result, the name of the sushi will appear on the top of the sushi you took picture of.
+- Second, in case of non-recognition or adding extra sushi into the list, click on the upper right section with sushi. Or in case of wrong recognition, click the button on the lower left section with sushi.
+- Next, as soon as you got everything correct, its ready for payment.
+- Lastly, the total price of sushi will appear automatically and you can easily give a change to the customer.
 
 
 ## Types of sushi
@@ -58,7 +59,6 @@ I used image 10 types of sushi.
 This project is a starting point for a Flutter application.
 A few resources to get you started if this is your first Flutter project:
 
-
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
@@ -70,6 +70,6 @@ I lost my soul while developing this app...
 
 <img src="https://media.giphy.com/media/zOvBKUUEERdNm/giphy.gif"  />
 
-special thanks>> shanya, couldn't do it without you. thankyou:)
+Special thanks>> Shanya, I couldn't do it without you. Thank you, love you. :)
 
 <img src="https://media.giphy.com/media/13awhIC2CcDaHC/giphy.gif"  />
