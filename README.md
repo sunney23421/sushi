@@ -2,6 +2,12 @@
 
 This project is about object detection that can identify 10 types of sushi by using Tensorflow, it used by Flutter as a mobile frame work.
 
+## Warning
+This project will not beable to compile anymore. Thank to JFrog (Bintray), bintray server would be blocked since Jfrog is migrating the artifacts to Artifactory.[ref1](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/)and [ref2](https://stackoverflow.com/questions/70309075/problems-in-android-repository-flutter-tensorflow-lite-by-bintray-502)
+
+The error is
+"Unable to load Maven meta-data from https://google.bintray.com/exoplayer/org/tensorflow/tensorflow-lite/maven-metadata.xml."
+
 ## Why?
 The reason why I've decided to create this app is beacuse I like to solve problems and cut-corners. I'd like to make our life easier by using  technologies. It's 2021, modern problems require modern solutions!!
 
