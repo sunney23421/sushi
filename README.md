@@ -1,6 +1,6 @@
 # SushiProjectZero
 
-This project is about object detection that can identify 10 types of sushi by using Tensorflow, it used by Flutter as a mobile frame work.
+This project is all about using object detection and identify 10 types of sushi by using Tensorflow. The project use Flutter as a mobile frame work.
 
 ## Warning
 This project will not beable to compile anymore. Thank to JFrog (Bintray), bintray server would be blocked since Jfrog is migrating the artifacts to Artifactory.[ref1](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/)and [ref2](https://stackoverflow.com/questions/70309075/problems-in-android-repository-flutter-tensorflow-lite-by-bintray-502)
@@ -9,19 +9,19 @@ The error is
 "Unable to load Maven meta-data from https://google.bintray.com/exoplayer/org/tensorflow/tensorflow-lite/maven-metadata.xml."
 
 ## Why?
-The reason why I've decided to create this app is beacuse I like to solve problems and cut-corners. I'd like to make our life easier by using  technologies. It's 2021, modern problems require modern solutions!!
+The reason why I've decided to create this app is beacuse I like to solve problems and cut-corners. I'd like to make our life easier by using technologies. It's 2021, modern problems require modern solutions!!
 
 <img src="https://media.giphy.com/media/9058ZMj6ooluP4UUPl/giphy.gif">
 
 ## Concept
-I'd like to develop application that can detect various types of sushi and calculate its price.
-Application is full of advantages that will make your life easier. It is a good opportunity for an employee to save time by recognizing what kind of sushi their customer took. 
+I'd like to develop application that can detect various types of sushi and calculate total price.
+Application is full of advantages that will make their life easier. An employee can save time by useing my app tp recognize what kind of sushi a customers took. 
 Moreover, new employees don't have to waste their time by remembering each type of sushi and its price. My apptlication will do all hard work for you.
 
 ## How it's work?
-I've used Tensorflow 1.5 as the framework, converted to Tensorflow lite and used with Flutter.
+I've used Tensorflow 1.5 as the framework, converted to Tensorflow lite and use with Flutter.
 TensorFlow is Google's open source AI framework for machine learning and high performance numerical computation.
-I used around 2000 images of 10 types of sushi, which is around 200 pre classes.
+I used around 2000 images of 10 types of sushi, which is around 200 pre class.
 I divided images into 2 sets: 
 First is, test set in 10% of total iamges. Second is, train set with 90% of images.
 
