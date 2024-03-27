@@ -7,6 +7,8 @@ This project will not beable to compile anymore. Thank to JFrog (Bintray), bintr
 
 The error is
 "Unable to load Maven meta-data from https://google.bintray.com/exoplayer/org/tensorflow/tensorflow-lite/maven-metadata.xml."
+## Remark
+This project build under Flutter 2.10. Newer flutter ver. will not work.
 
 ## Why?
 The reason why I've decided to create this app is beacuse I like to solve problems and cut-corners. I'd like to make our life easier by using technologies. It's 2021, modern problems require modern solutions!!
